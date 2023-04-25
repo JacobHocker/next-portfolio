@@ -40,6 +40,8 @@ const MovingImg = ({ title, img, link }) => {
             style={{ x:x, y:y }}
             initial={{ opacity: 0}}
             whileInView={{ opacity:1, transition: { duration: 0.2 }}}
+            priority
+            sizes='(max-width: 768px) 100vw, (max-width: 1200) 50vw, 50vw'
             ref={imgRef} src={img} alt={title} className='w-96 z-10 h-auto hidden absolute rounded-lg' />
         </Link>
     )
@@ -50,12 +52,13 @@ const Article = ({ img, title, date, link }) => {
         <motion.li 
         initial={{ y:200 }}
         whileInView={{ y:0, transition:{ duration: 0.5, ease:"easeInOut" }}}
-        viewport={{ once: true}}
+        // IF I ONLY WANT IT TO PLAY ONCE
+        //viewport={{ once: true}}
         className='relative w-full p-4 py-6 my-4 rounded-xl flex items-center
-        justify-between bg-light text-dark first:mt-0 border border-solid border-dark
+        justify-between bg-light text-dark dark:bg-dark dark:text-light first:mt-0 border border-solid border-dark dark:border-light
         border-r-4 border-b-4'>
             <MovingImg title={title} img={img} link={link} />
-            <span className='text-primary font-semibold pl-4'>{date}</span>
+            <span className='text-primary dark:text-primaryDark font-semibold pl-4'>{date}</span>
             
         </motion.li>
     )
@@ -64,10 +67,10 @@ const Article = ({ img, title, date, link }) => {
 const FeaturedArticle = ({ img, title, time, summary, link }) => {
 
     return(
-        <li className='col-span-1 relative w-full p-4 bg-light border border-solid border-dark rounded-2xl'>
+        <li className='col-span-1 relative w-full p-4 bg-light dark:bg-dark border border-solid border-dark dark:border-light rounded-2xl'>
             
             <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] 
-            rounded-[2rem] bg-dark rounded-br-3xl' />
+            rounded-[2rem] bg-dark dark:bg-light rounded-br-3xl' />
             <Link href={link} target='_blank'
             className='w-full cursor-pointer inline-block overflow-hidden rounded-lg'
             >
@@ -77,10 +80,10 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
                 />
             </Link>
             <Link href={link} target='_blank'>
-                <h2 className='capitalize font-bold text-2xl my-2 mt-4 hover:underline '>{title}</h2>
+                <h2 className='capitalize font-bold text-2xl my-2 mt-4 hover:underline dark:text-light'>{title}</h2>
             </Link>
             <p className='text-sm mb-2'>{summary}</p>
-            <span className='text-primary font-semibold'>{time} minutes</span>
+            <span className='text-primary dark:text-primaryDark font-semibold'>{time} minutes</span>
         </li>
     )
 }
@@ -92,7 +95,7 @@ const articles = () => {
                 <title>Jacob Hocker | Articles Page</title>
                 <meta name='description' content="Articles written by Jacob Hocker" />
             </Head>
-            <main className='w-full mb-16 flex flex-col items-center justify-center overflow-hidden'>
+            <main className='w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light'>
                 <Layout className='pt-16'>
                     <AnimatedText text="Words Can Change The World"  clasName='mb-16'/>
 
