@@ -16,6 +16,7 @@ const AnimatedNumbers = ({ value }) => {
     const springValue = useSpring(motionValue, { duration: 3000 });
     const isInView = useInView(ref, { once: true });
 
+    
     useEffect(() => {
         if(isInView) {
             motionValue.set(value)
@@ -40,7 +41,7 @@ function about() {
                 <title>Jacob Hocker | About Page</title>
                 <meta name='description' content="Jacob Hocker's about page" />
             </Head>
-            <main className='flex w-full flex-col items center justify-center'>
+            <main className='flex w-full flex-col items center justify-center dark:text-light'>
 
                 <Layout className='pt-16'>
                     <AnimatedText text="Passion Fuels Purpose!" className="mb-16"/>
@@ -70,21 +71,21 @@ function about() {
                                 <span className='inline-block text-7xl font-bold'>
                                     <AnimatedNumbers value={20} />+
                                 </span>
-                                <h2 className='text-xl font-medium capitalize text-dark/75'>satisfied clients</h2>
+                                <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75'>satisfied clients</h2>
                             </div>
 
                             <div className='flex flex-col items-end justify-center'>
                                 <span className='inline-block text-7xl font-bold'>
                                     <AnimatedNumbers value={15} />+
                                 </span>
-                                <h2 className='text-xl font-medium capitalize text-dark/75'>projects completed</h2>
+                                <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75'>projects completed</h2>
                             </div>
 
                             <div className='flex flex-col items-end justify-center'>
                                 <span className='inline-block text-7xl font-bold'>
                                     <AnimatedNumbers value={2} />+
                                 </span>
-                                <h2 className='text-xl font-medium capitalize text-dark/75'>years of experience</h2>
+                                <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75'>years of experience</h2>
                             </div>
 
                         </div>
