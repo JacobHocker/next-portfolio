@@ -17,7 +17,7 @@ export default function Home() {
         <meta name="description" content="Jacob Hocker's portfolio." />
         
       </Head>
-      <main className='flex items-center text-dark w-full min-h-screen'>
+      <main className='flex items-center text-dark w-full min-h-screen dark:text-light'>
 
         <Layout className='pt-0'>
 
@@ -37,12 +37,16 @@ export default function Home() {
                 download={true}
                 className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold
                 hover:bg-light hover:text-dark border-2 border-solid border-transparent
-                hover:border-dark'>
+                hover:border-dark
+                
+                dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light
+                hover:dark:border-light
+                '>
                   Resume <LinkArrow className={" w-6 ml-1"}/>
                   
                   </Link>
                 <Link href="mailto:jacobdouglas06@gmail.com" target={"_blank"}
-                className='ml-4 text-lg font-medium capitalize text-dark underline'
+                className='ml-4 text-lg font-medium capitalize text-dark dark:text-light underline'
                 >Contact</Link>
               </div>
             </div>
