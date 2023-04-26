@@ -38,7 +38,7 @@ export default function Home() {
               ' />
               <p className='my-4 text-base font-medium md:text-sm sm:text-xs'>
                 As a passionate software developer & tech support specialist, I am commited to turning ideas into a reality. 
-                Explore my latest projects and articles. See my specialties in React, development/design,and technical support.
+                Explore my latest projects and articles. See my specialties in React, development/design, and technical support.
               </p>
               <div className='flex items-center self-start mt-2 lg:self-center'>
                 <Link href="/dummy.pdf" target={"_blank"}
@@ -63,7 +63,7 @@ export default function Home() {
         </Layout>
 
         <HireMe />
-        <div className='absolute right-8 bottom-8 inline-block w-24 md:hidden'>
+        <div className='absolute right-8 -bottom-10 lg:bottom-8 inline-block w-24 md:hidden'>
           <Image src={tech} alt='homeSVG' className='w-full h-auto' />
         </div>
       </main>
