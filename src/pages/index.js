@@ -50,8 +50,8 @@ export default function Home() {
                 dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light
                 hover:dark:border-light md:p-2 md:px-4 sm:px-2 md:text-base
                 '>
-                  Resume <LinkArrow className={" w-6 ml-1 sm:w-2"}/>
-                  
+                  {/* Resume <LinkArrow className={" w-6 ml-1 sm:w-2"}/> */}
+                  Resume
                   </Link>
                 <Link href="mailto:jacobdouglas06@gmail.com" target={"_blank"}
                 className='ml-4 text-lg font-medium capitalize text-dark dark:text-light underline md:text-base'
