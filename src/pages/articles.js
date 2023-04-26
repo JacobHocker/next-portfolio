@@ -8,6 +8,7 @@ import RoutesArticle from '../../public/images/articles/RoutesArticle.png';
 import ApiCallArticle from '../../public/images/articles/ApiCallArticle.png';
 import CustomKeysArticle from '../../public/images/articles/CustomKeysArticle.png';
 import { motion, useMotionValue } from 'framer-motion';
+import TransitionEffect from '@/components/TransitionEffect';
 
 const FramerImage = motion(Image);
 
@@ -96,6 +97,7 @@ const articles = () => {
                 <title>Jacob Hocker | Articles Page</title>
                 <meta name='description' content="Articles written by Jacob Hocker" />
             </Head>
+            <TransitionEffect />
             <main className='w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light'>
                 <Layout className='pt-16'>
                     <AnimatedText text="Words Can Change The World"  className='mb-16 sm:mb-8 sm:!text-6xl xs:!text-4xl md:grid-cols-1 md:gap-y-16'/>

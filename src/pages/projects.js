@@ -10,6 +10,7 @@ import QuizChampThumb from '../../public/images/projects/QuizChampThumbnail.jpg'
 import PortfolioThumb from '../../public/images/projects/PortfolioThumbnail.png';
 import Filler from '../../public/images/projects/crypto-screener-cover-image.jpg';
 import { motion } from 'framer-motion';
+import TransitionEffect from '@/components/TransitionEffect';
 
 const FramerImage = motion(Image);
 
@@ -117,6 +118,7 @@ const projects = () => {
                 <title>Jacob Hocker | Projects Page</title>
                 <meta name='description' content="Projects by Jacob Hocker" />
             </Head>
+            <TransitionEffect />
             <main className='w-full mb-16 flex flex-col items-center justify-center dark:text-light'>
                 <Layout className='pt-16' >
                     <AnimatedText text="Effort Never Fails!" className='mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl' />

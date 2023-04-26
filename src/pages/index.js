@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { LinkArrow } from '@/components/Icons';
 import HireMe from '@/components/HireMe';
 import tech from '../../public/images/svgs/technology.svg';
+import TransitionEffect from '@/components/TransitionEffect';
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         <meta name="description" content="Jacob Hocker's portfolio." />
         
       </Head>
+      <TransitionEffect />
       <main className='flex items-center text-dark w-full min-h-screen dark:text-light'>
 
         <Layout className='pt-0 md:pt-16 sm:pt-8'>
