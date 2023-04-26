@@ -48,7 +48,7 @@ export default function Home() {
                 hover:border-dark
                 
                 dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light
-                hover:dark:border-light md:p-2 md:px-4 md:text-base
+                hover:dark:border-light md:p-2 md:px-4 sm:px-2 md:text-base
                 '>
                   Resume <LinkArrow className={" w-6 ml-1"}/>
                   
