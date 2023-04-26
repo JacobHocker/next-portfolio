@@ -42,7 +42,7 @@ const MovingImg = ({ title, img, link }) => {
             whileInView={{ opacity:1, transition: { duration: 0.2 }}}
             priority
             sizes='(max-width: 768px) 100vw, (max-width: 1200) 50vw, 50vw'
-            ref={imgRef} src={img} alt={title} className='w-96 z-10 h-auto hidden absolute rounded-lg' />
+            ref={imgRef} src={img} alt={title} className='w-96 z-10 h-auto hidden absolute rounded-lg md:!hidden' />
         </Link>
     )
 };
@@ -50,15 +50,16 @@ const MovingImg = ({ title, img, link }) => {
 const Article = ({ img, title, date, link }) => {
     return(
         <motion.li 
-        initial={{ y:200 }}
-        whileInView={{ y:0, transition:{ duration: 0.5, ease:"easeInOut" }}}
-        // IF I ONLY WANT IT TO PLAY ONCE
-        //viewport={{ once: true}}
+        initial={{ y:150 }}
+        whileInView={{ y:0, transition:{ duration: 0.5, ease:"easeInOut", once: true }}}
+        
         className='relative w-full p-4 py-6 my-4 rounded-xl flex items-center
         justify-between bg-light text-dark dark:bg-dark dark:text-light first:mt-0 border border-solid border-dark dark:border-light
-        border-r-4 border-b-4'>
+        border-r-4 border-b-4 sm:flex-col
+        
+        '>
             <MovingImg title={title} img={img} link={link} />
-            <span className='text-primary dark:text-primaryDark font-semibold pl-4'>{date}</span>
+            <span className='text-primary dark:text-primaryDark font-semibold pl-4 sm:text-start sm:pl-0 xs:text-sm'>{date}</span>
             
         </motion.li>
     )
@@ -80,7 +81,7 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
                 />
             </Link>
             <Link href={link} target='_blank'>
-                <h2 className='capitalize font-bold text-2xl my-2 mt-4 hover:underline dark:text-light'>{title}</h2>
+                <h2 className='capitalize font-bold text-2xl my-2 mt-4 hover:underline dark:text-light xs:text-lg '>{title}</h2>
             </Link>
             <p className='text-sm mb-2'>{summary}</p>
             <span className='text-primary dark:text-primaryDark font-semibold'>{time} minutes</span>
@@ -97,9 +98,9 @@ const articles = () => {
             </Head>
             <main className='w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light'>
                 <Layout className='pt-16'>
-                    <AnimatedText text="Words Can Change The World"  clasName='mb-16'/>
+                    <AnimatedText text="Words Can Change The World"  className='mb-16 sm:mb-8 sm:!text-6xl xs:!text-4xl md:grid-cols-1 md:gap-y-16'/>
 
-                    <ul className='grid grid-cols-2 gap-16'>
+                    <ul className='grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16'>
                         <FeaturedArticle 
                         img={RoutesArticle}
                         link="https://medium.com/@jacobhocker/creating-custom-randomized-routes-in-react-rails-app-109c7c9a5780"
