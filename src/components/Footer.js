@@ -14,7 +14,7 @@ function Footer() {
                     '> Jacob Hocker</Link>
                 </div>
                 
-                <Link href="/">Say hello</Link>
+                <Link href="/">Say Hello!</Link>
             </Layout>
         </footer>
     )

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import Logo from './Logo'
 import { useRouter } from 'next/router'
-import { DribbbleIcon, GithubIcon, LinkedInIcon, MoonIcon, PinterestIcon, SunIcon, TwitterIcon } from './Icons';
+import { DribbbleIcon, GithubIcon, LinkedInIcon, MediumIcon, MoonIcon, PinterestIcon, SunIcon, TwitterIcon } from './Icons';
 import { motion } from 'framer-motion';
 import useThemeSwitcher from './hooks/useThemeSwitcher';
 
@@ -99,7 +99,7 @@ const NavBar = () => {
                         <LinkedInIcon />
                     </motion.a>
 
-                    <motion.a  href = "https://pintrest.com"
+                    {/* <motion.a  href = "https://pintrest.com"
                     target = {
                         "_blank"
                     }
@@ -107,9 +107,19 @@ const NavBar = () => {
                     whileTap={{ scale:0.9 }}
                     className = 'w-6 mx-3 bg-light rounded-full' >
                         <PinterestIcon />
+                    </motion.a> */}
+
+                    <motion.a  href = "https://medium.com/@jacobhocker"
+                    target = {
+                        "_blank"
+                    }
+                    whileHover={{ y: -2 }}
+                    whileTap={{ scale:0.9 }}
+                    className = 'w-6 mx-3 bg-light border border-dark dark:border-dark dark:border rounded-full ' >
+                        <MediumIcon />
                     </motion.a>
 
-                    <motion.a  href = "https://dribble.com"
+                    <motion.a  href = "https://dribbble.com/JacobHocker"
                     target = {
                         "_blank"
                     }
@@ -182,7 +192,7 @@ const NavBar = () => {
                             <LinkedInIcon />
                         </motion.a>
 
-                        <motion.a  href = "https://pintrest.com"
+                        {/* <motion.a  href = "https://pintrest.com"
                         target = {
                             "_blank"
                         }
@@ -190,9 +200,19 @@ const NavBar = () => {
                         whileTap={{ scale:0.9 }}
                         className = 'w-6 mx-3 bg-light rounded-full sm:mx-1' >
                             <PinterestIcon />
+                        </motion.a> */}
+
+                        <motion.a  href = "https://medium.com/@jacobhocker"
+                        target = {
+                            "_blank"
+                        }
+                        whileHover={{ y: -2 }}
+                        whileTap={{ scale:0.9 }}
+                        className = 'w-6 mx-3 bg-light dark:border-dark dark:border rounded-full sm:mx-1' >
+                            <MediumIcon />
                         </motion.a>
 
-                        <motion.a  href = "https://dribble.com"
+                        <motion.a  href = "https://dribbble.com/JacobHocker"
                         target = {
                             "_blank"
                         }
@@ -203,13 +223,13 @@ const NavBar = () => {
                         </motion.a>
 
                         <button onClick={() => {setMode(mode === "light" ? "dark" : "light")}}
-                        className={`ml-3 flex items-center justify-center rounded-full p-1 w-6
-                        ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
+                        className={`ml-1.5 flex items-center justify-center rounded-full p-1 w-7
+                        ${mode === "light" ? "bg-dark text-light border border-light" : "bg-light text-dark border border-dark"}
                         `}
                         >
                             {
                                 mode === "dark" ? 
-                                <SunIcon className={"fill-dark"} />
+                                <SunIcon className={"fill-dark "} />
                                 :
                                 <MoonIcon className={"fill-dark"} />
                             }
