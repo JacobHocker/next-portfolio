@@ -69,7 +69,7 @@ const NavBar = () => {
                 
                 <nav className="flex items-center justify-center flex-wrap">
 
-                    <motion.a  href = "https://twitter.com"
+                    {/* <motion.a  href = "https://twitter.com"
                     target = {
                         "_blank"
                     }
@@ -77,7 +77,7 @@ const NavBar = () => {
                     whileTap={{ scale:0.9 }}
                     className = 'w-6 mr-3' >
                         <TwitterIcon />
-                    </motion.a>
+                    </motion.a> */}
 
                     <motion.a  href = "https://github.com/JacobHocker"
                     target = {
@@ -125,7 +125,7 @@ const NavBar = () => {
                     }
                     whileHover={{ y: -2 }}
                     whileTap={{ scale:0.9 }}
-                    className = 'w-6 ml-3' >
+                    className = 'w-6 mx-3' >
                         <DribbbleIcon />
                     </motion.a>
 
@@ -162,7 +162,7 @@ const NavBar = () => {
                     
                     <nav className="flex items-center justify-center flex-wrap mt-2">
 
-                        <motion.a  href = "https://twitter.com"
+                        {/* <motion.a  href = "https://twitter.com"
                         target = {
                             "_blank"
                         }
@@ -170,7 +170,7 @@ const NavBar = () => {
                         whileTap={{ scale:0.9 }}
                         className = 'w-6 mr-3 sm:mx-1' >
                             <TwitterIcon />
-                        </motion.a>
+                        </motion.a> */}
 
                         <motion.a  href = "https://github.com/JacobHocker"
                         target = {
@@ -218,7 +218,7 @@ const NavBar = () => {
                         }
                         whileHover={{ y: -2 }}
                         whileTap={{ scale:0.9 }}
-                        className = 'w-6 ml-3 sm:mx-1' >
+                        className = 'w-6 mx-3 sm:mx-1' >
                             <DribbbleIcon />
                         </motion.a>
 
