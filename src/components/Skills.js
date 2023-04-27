@@ -26,7 +26,9 @@ const Skill = ({ name, x, y}) => {
 const Skills = () => {
     return (
         <>
-            <h2 className='font-bold text-8xl mt-64 w-full text-center md:text-6xl md:mt-32'>Skills</h2>
+            {/* FRONT END SKILLS */}
+            <>
+            <h2 className='font-bold text-8xl mt-64 w-full text-center md:text-6xl sm:text-4xl xs:text-3xl md:mt-32'>Front End Skills</h2>
             <div className='w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark
             lg:h-[80vh] sm:h-[60vh] xs:h-[50vh]
             lg:bg-circularLightLg lg:dark:bg-circularDarkLg
@@ -36,19 +38,52 @@ const Skills = () => {
                 <motion.div className='flex items-center justify-center dark:bg-light dark:text-dark rounded-full font-semibold
                 bg-dark text-light py-3 px-6 absolute shadow-dark cursor-pointer lg:p-6 md:p-4 xs:p-2'
                     whileHover={{ scale:1.05}}>
-                    Full Stack
+                    Web
                 </motion.div>
 
-                <Skill name="CSS" x="-5vw" y="-10vw" />
-                <Skill name="HTML" x="-20vw" y="2vw" />
-                <Skill name="JavaScript" x="-10vw" y="1vw" />
-                <Skill name="Reactjs" x="-30vw" y="5vw" />
-                <Skill name="Tailwind CSS" x="20vw" y="-11vw" />
-                <Skill name="Sass(SCSS)" x="15vw" y="8vw" />
-                <Skill name="JSON" x="5vw" y="-10vw" />
-                <Skill name="Framer Motion" x="5vw" y="-15vw" />
+                <Skill name="CSS" x="15vw" y="20vw" />
+                <Skill name="HTML" x="-25vw" y="0vw" />
+                <Skill name="JavaScript" x="-15vw" y="14vw" />
+                <Skill name="ReactJS" x="-30vw" y="-15vw" />
+                <Skill name="Tailwind" x="20vw" y="-11vw" />
+                <Skill name="Sass" x="15vw" y="8vw" />
+                <Skill name="Bootstrap" x="30vw" y="14vw" />
+                <Skill name="NextJS" x="30vw" y="0vw" />
+                <Skill name="Agile" x="0vw" y="-20vw" />
+                <Skill name="Framer Motion" x="0vw" y="-30vw" />
+                
 
             </div>
+            </>
+
+            {/* BACKEND SKILLS */}
+            <>
+                <h2 className='font-bold text-8xl mt-64 w-full text-center md:text-6xl sm:text-4xl xs:text-3xl md:mt-32'>Back End Skills</h2>
+                <div className='w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark
+                lg:h-[80vh] sm:h-[60vh] xs:h-[50vh]
+                lg:bg-circularLightLg lg:dark:bg-circularDarkLg
+                md:bg-circularLightMd md:dark:bg-circularDarkMd
+                sm:bg-circularLightSm sm:dark:bg-circularDarkSm
+                '>
+                    <motion.div className='flex items-center justify-center dark:bg-light dark:text-dark rounded-full font-semibold
+                    bg-dark text-light py-3 px-6 absolute shadow-dark cursor-pointer lg:p-6 md:p-4 xs:p-2'
+                        whileHover={{ scale:1.05}}>
+                        API
+                    </motion.div>
+
+                    <Skill name="OOP" x="-5vw" y="20vw" />
+                    <Skill name="Ruby" x="-20vw" y="-17vw" />
+                    <Skill name="NodeJS" x="25vw" y="0vw" />
+                    <Skill name="ExpressJS" x="-28vw" y="12vw" />
+                    <Skill name="MySQL" x="23vw" y="-13vw" />
+                    <Skill name="Postgres" x="15vw" y="15vw" />
+                    <Skill name="JSON" x="-25vw" y="0vw" />
+                    <Skill name="Ruby on Rails" x="5vw" y="-24vw" />
+                    <Skill name="REST" x="-35vw" y="-10vw" />
+                    <Skill name="JWT" x="22vw" y="-30vw" />
+                    <Skill name="CRUD" x="-25vw" y="23vw" />
+                </div>
+            </>
         </>
     )
 }

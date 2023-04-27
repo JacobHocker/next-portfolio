@@ -1,3 +1,0 @@
-- THINGS TO FINISH
-    - [] Creating and placing skill nodes
-    - [] Changing thumbnail for projects.

@@ -8,9 +8,9 @@ import { GithubIcon } from '@/components/Icons';
 import EntSpotThumb from '../../public/images/projects/EntSpotThumbnail.jpg';
 import QuizChampThumb from '../../public/images/projects/QuizChampThumbnail.jpg';
 import PortfolioThumb from '../../public/images/projects/PortfolioThumbnail.png';
-import Filler from '../../public/images/projects/crypto-screener-cover-image.jpg';
 import { motion } from 'framer-motion';
 import TransitionEffect from '@/components/TransitionEffect';
+import ComingSoon from '../../public/images/projects/ComingSoon.jpeg';
 
 const FramerImage = motion(Image);
 
@@ -154,10 +154,10 @@ const projects = () => {
                 <div className='col-span-6 sm:col-span-12'>
                     <Project 
                         type="Featured Project"
-                        title="Crypto Screener"
+                        title="Coming Soon"
                         link="/"
                         github="/"
-                        img={Filler}
+                        img={ComingSoon}
                     />
                 </div>
 
@@ -177,20 +177,20 @@ const projects = () => {
                 <div className='col-span-6 sm:col-span-12'>
                     <Project 
                         type="Featured Project"
-                        title="Crypto Screener"
+                        title="Coming Soon"
                         link="/"
                         github="/"
-                        img={Filler}
+                        img={ComingSoon}
                     />
                 </div>
 
                 <div className='col-span-6 sm:col-span-12'>
                     <Project 
                         type="Featured Project"
-                        title="Crypto Screener"
+                        title="Coming Soon"
                         link="/"
                         github="/"
-                        img={Filler}
+                        img={ComingSoon}
                     />
                 </div>
 

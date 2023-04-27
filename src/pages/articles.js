@@ -9,6 +9,7 @@ import ApiCallArticle from '../../public/images/articles/ApiCallArticle.png';
 import CustomKeysArticle from '../../public/images/articles/CustomKeysArticle.png';
 import { motion, useMotionValue } from 'framer-motion';
 import TransitionEffect from '@/components/TransitionEffect';
+import HamburgerArticle from '../../public/images/articles/HamburgerArticle.jpg';
 
 const FramerImage = motion(Image);
 
@@ -51,7 +52,7 @@ const MovingImg = ({ title, img, link }) => {
 const Article = ({ img, title, date, link }) => {
     return(
         <motion.li 
-        initial={{ y:150 }}
+        initial={{ y:100 }}
         whileInView={{ y:0, transition:{ duration: 0.5, ease:"easeInOut", once: true }}}
         
         className='relative w-full p-4 py-6 my-4 rounded-xl flex items-center
@@ -104,21 +105,20 @@ const articles = () => {
 
                     <ul className='grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16'>
                         <FeaturedArticle 
+                        img={HamburgerArticle}
+                        link="https://medium.com/@jacobhocker/creating-an-animated-hamburger-menu-in-nextjs-tailwind-css-9e332d428811"
+                        title="Create an animated hamburger menu in NextJS & Tailwind CSS"
+                        summary="Learn how to create an animated hamburger menu in React and Tailwind that is completely customizable."
+                        time="5"
+                        />
+                        <FeaturedArticle 
                         img={RoutesArticle}
                         link="https://medium.com/@jacobhocker/creating-custom-randomized-routes-in-react-rails-app-109c7c9a5780"
                         title="Create Custom Randomized Routes in React/Rails App"
                         summary="Learn how to create randomized routes customized in Rails & React, for randomizing API route calls."
                         time="4"
                         />
-
-                        <FeaturedArticle 
-                        img={CustomKeysArticle}
-                        link="https://medium.com/@jacobhocker/disabling-setting-up-custom-keys-in-ruby-activerecord-sinatra-phase-3-349253f04999"
-                        title="Setting Up Custom Keys In Ruby And Sinatra"
-                        summary="Learn how to create custom keys and disbale custom keys in Ruby using Active Record and Sinatra."
-                        time="4"
                         
-                        />
                     </ul>
                     <h2 className='font-bold text-4xl w-full text-center my-16 mt-32'>All Articles</h2>
                     <ul>
@@ -127,6 +127,13 @@ const articles = () => {
                         date="March 10, 2022"
                         img={ApiCallArticle}
                         link="https://medium.com/@jacobhocker/making-an-external-api-call-using-backend-in-a-react-rails-app-89f3d657f8e1"
+                        
+                        />
+                        <Article 
+                        title="Setting Up Custom Keys In Ruby And Sinatra"
+                        date="November 7, 2021"
+                        img={CustomKeysArticle}
+                        link="https://medium.com/@jacobhocker/disabling-setting-up-custom-keys-in-ruby-activerecord-sinatra-phase-3-349253f04999"
                         
                         />
                     </ul>
