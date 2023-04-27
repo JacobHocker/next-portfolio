@@ -1,10 +1,10 @@
 import Layout from '@/components/Layout';
 import Image from 'next/image';
 import Head from 'next/head';
-import profilePic from "../../public/images/profile/fullbodyeditedNoBGLG.png";
+import profilePic from "../../public/images/profile/EdtLndScpeNoBG.png";
 import AnimatedText from '@/components/AnimatedText';
 import Link from 'next/link';
-import { LinkArrow } from '@/components/Icons';
+//import { LinkArrow } from '@/components/Icons';
 import HireMe from '@/components/HireMe';
 import tech from '../../public/images/svgs/technology.svg';
 import TransitionEffect from '@/components/TransitionEffect';
@@ -41,7 +41,7 @@ export default function Home() {
                 Explore my latest projects and articles. See my specialties in React, development/design, and technical support.
               </p>
               <div className='flex items-center self-start mt-2 lg:self-center'>
-                <Link href="/dummy.pdf" target={"_blank"}
+                <Link href="/jacob-hocker-resume.pdf" target={"_blank"}
                 download={true}
                 className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold
                 hover:bg-light hover:text-dark border-2 border-solid border-transparent
