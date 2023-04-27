@@ -10,6 +10,7 @@ import CustomKeysArticle from '../../public/images/articles/CustomKeysArticle.pn
 import { motion, useMotionValue } from 'framer-motion';
 import TransitionEffect from '@/components/TransitionEffect';
 import HamburgerArticle from '../../public/images/articles/HamburgerArticle.jpg';
+import ToTop from '@/components/ToTop';
 
 const FramerImage = motion(Image);
 
@@ -137,6 +138,8 @@ const articles = () => {
                         
                         />
                     </ul>
+
+                    <ToTop />
                 </Layout>
             </main>
         </>

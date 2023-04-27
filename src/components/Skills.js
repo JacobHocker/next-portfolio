@@ -15,8 +15,8 @@ const Skill = ({ name, x, y}) => {
             whileHover={{ scale:1.05 }}
             initial={{ x:0, y:0 }}
             whileInView={{ x:x, y:y, transition: {duration: 1.5} }}
-            // if i only want it animated once
-            // viewport: {{ once: true }}
+            
+            viewport={{ once: true }}
             >
             {name}
         </motion.div>
@@ -43,14 +43,14 @@ const Skills = () => {
 
                 <Skill name="CSS" x="15vw" y="20vw" />
                 <Skill name="HTML" x="-25vw" y="0vw" />
-                <Skill name="JavaScript" x="-15vw" y="14vw" />
-                <Skill name="ReactJS" x="-30vw" y="-15vw" />
+                <Skill name="JavaScript" x="0vw" y="14vw" />
+                <Skill name="ReactJS" x="-23vw" y="-15vw" />
                 <Skill name="Tailwind" x="20vw" y="-11vw" />
-                <Skill name="Sass" x="15vw" y="8vw" />
-                <Skill name="Bootstrap" x="30vw" y="14vw" />
+                <Skill name="Sass" x="-15vw" y="8vw" />
+                <Skill name="Bootstrap" x="27vw" y="12vw" />
                 <Skill name="NextJS" x="30vw" y="0vw" />
-                <Skill name="Agile" x="0vw" y="-20vw" />
-                <Skill name="Framer Motion" x="0vw" y="-30vw" />
+                <Skill name="Agile" x="0vw" y="-13vw" />
+                <Skill name="Framer Motion" x="0vw" y="-20vw" />
                 
 
             </div>
@@ -71,17 +71,16 @@ const Skills = () => {
                         API
                     </motion.div>
 
-                    <Skill name="OOP" x="-5vw" y="20vw" />
-                    <Skill name="Ruby" x="-20vw" y="-17vw" />
+                    <Skill name="OOP" x="3vw" y="20vw" />
+                    <Skill name="Ruby" x="-15vw" y="-17vw" />
                     <Skill name="NodeJS" x="25vw" y="0vw" />
                     <Skill name="ExpressJS" x="-28vw" y="12vw" />
                     <Skill name="MySQL" x="23vw" y="-13vw" />
                     <Skill name="Postgres" x="15vw" y="15vw" />
                     <Skill name="JSON" x="-25vw" y="0vw" />
                     <Skill name="Ruby on Rails" x="5vw" y="-24vw" />
-                    <Skill name="REST" x="-35vw" y="-10vw" />
-                    <Skill name="JWT" x="22vw" y="-30vw" />
-                    <Skill name="CRUD" x="-25vw" y="23vw" />
+                    <Skill name="REST" x="-30vw" y="-10vw" />
+                    
                 </div>
             </>
         </>

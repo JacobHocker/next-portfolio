@@ -11,6 +11,7 @@ import PortfolioThumb from '../../public/images/projects/PortfolioThumbnail.jpeg
 import { motion } from 'framer-motion';
 import TransitionEffect from '@/components/TransitionEffect';
 import ComingSoon from '../../public/images/projects/ComingSoon.jpeg';
+import ToTop from '@/components/ToTop';
 
 const FramerImage = motion(Image);
 
@@ -195,6 +196,8 @@ const projects = () => {
                 </div>
 
             </div>
+
+            <ToTop />
 
             </Layout>
             </main>

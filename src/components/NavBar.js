@@ -48,7 +48,7 @@ const NavBar = () => {
     };
 
     return (
-        <header
+        <header id="nav"
         className='w-full px-32 py-8 font-medium z-10 lg:px-16 md:px-12 sm:px-8 flex items-center justify-between
         dark:text-light relative'
         >
@@ -69,15 +69,6 @@ const NavBar = () => {
                 
                 <nav className="flex items-center justify-center flex-wrap">
 
-                    {/* <motion.a  href = "https://twitter.com"
-                    target = {
-                        "_blank"
-                    }
-                    whileHover={{ y: -2 }}
-                    whileTap={{ scale:0.9 }}
-                    className = 'w-6 mr-3' >
-                        <TwitterIcon />
-                    </motion.a> */}
 
                     <motion.a  href = "https://github.com/JacobHocker"
                     target = {
@@ -99,15 +90,6 @@ const NavBar = () => {
                         <LinkedInIcon />
                     </motion.a>
 
-                    {/* <motion.a  href = "https://pintrest.com"
-                    target = {
-                        "_blank"
-                    }
-                    whileHover={{ y: -2 }}
-                    whileTap={{ scale:0.9 }}
-                    className = 'w-6 mx-3 bg-light rounded-full' >
-                        <PinterestIcon />
-                    </motion.a> */}
 
                     <motion.a  href = "https://medium.com/@jacobhocker"
                     target = {
@@ -148,6 +130,7 @@ const NavBar = () => {
             {
                 isOpen ?
                 <motion.div 
+                
                 initial={{ scale:0, opacity:0, x:"-50%", y:"-50%" }}
                 animate={{ scale:1, opacity:1}}
                 transition={{ duration: 0.15 }}
@@ -162,15 +145,7 @@ const NavBar = () => {
                     
                     <nav className="flex items-center justify-center flex-wrap mt-2">
 
-                        {/* <motion.a  href = "https://twitter.com"
-                        target = {
-                            "_blank"
-                        }
-                        whileHover={{ y: -2 }}
-                        whileTap={{ scale:0.9 }}
-                        className = 'w-6 mr-3 sm:mx-1' >
-                            <TwitterIcon />
-                        </motion.a> */}
+                        
 
                         <motion.a  href = "https://github.com/JacobHocker"
                         target = {
@@ -191,16 +166,6 @@ const NavBar = () => {
                         className = 'w-6 mx-3 sm:mx-1' >
                             <LinkedInIcon />
                         </motion.a>
-
-                        {/* <motion.a  href = "https://pintrest.com"
-                        target = {
-                            "_blank"
-                        }
-                        whileHover={{ y: -2 }}
-                        whileTap={{ scale:0.9 }}
-                        className = 'w-6 mx-3 bg-light rounded-full sm:mx-1' >
-                            <PinterestIcon />
-                        </motion.a> */}
 
                         <motion.a  href = "https://medium.com/@jacobhocker"
                         target = {
