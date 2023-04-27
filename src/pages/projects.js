@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { GithubIcon } from '@/components/Icons';
 import EntSpotThumb from '../../public/images/projects/EntSpotThumbnail.jpg';
 import QuizChampThumb from '../../public/images/projects/QuizChampThumbnail.jpg';
-import PortfolioThumb from '../../public/images/projects/PortfolioThumbnail.png';
+import PortfolioThumb from '../../public/images/projects/PortfolioThumbnail.jpeg';
 import { motion } from 'framer-motion';
 import TransitionEffect from '@/components/TransitionEffect';
 import ComingSoon from '../../public/images/projects/ComingSoon.jpeg';
