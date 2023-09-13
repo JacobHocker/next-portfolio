@@ -1,7 +1,7 @@
 import Layout from '@/components/Layout';
 import Image from 'next/image';
 import Head from 'next/head';
-import profilePic from "../../public/images/profile/EdtLndScpeNoBG.png";
+import profilePic from "../../public/images/profile/Lndscpe-edited-NoBG.png";
 import AnimatedText from '@/components/AnimatedText';
 import Link from 'next/link';
 //import { LinkArrow } from '@/components/Icons';
