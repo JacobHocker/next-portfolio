@@ -5,15 +5,18 @@ import AnimatedText from '@/components/AnimatedText';
 import Link from 'next/link';
 import Image from 'next/image';
 import { GithubIcon } from '@/components/Icons';
-import EntSpotThumb from '../../public/images/projects/EntSpotThumbnail.jpg';
+import ScreenDbThumb from '../../public/images/projects/screenDbThumbnail.png';
+import PixelPalaceThumb from '../../public/images/projects/PixelPalaceThumbnail.png'
 import QuizChampThumb from '../../public/images/projects/QuizChampThumbnail.jpg';
-import PortfolioThumb from '../../public/images/projects/PortfolioThumbnail.jpeg';
+import PortfolioThumb from '../../public/images/projects/portfolioThumbnail.png';
 import { motion } from 'framer-motion';
 import TransitionEffect from '@/components/TransitionEffect';
 import ComingSoon from '../../public/images/projects/ComingSoon.jpeg';
 import ToTop from '@/components/ToTop';
 
 const FramerImage = motion(Image);
+
+
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 
@@ -47,13 +50,16 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
                 <div className='mt-2 flex items-center'>
                     <Link href={github} target='_blank' className='w-10'>
                         {" "}
-                        <GithubIcon />
+                        <GithubIcon className='hover:text-primary dark:hover:text-primaryDark ease-in-out duration-300' />
                         {" "}
                     </Link>
                     <Link href={link} target='_blank'
                     className='ml-4 rounded-lg bg-dark text-light dark:bg-light
                     dark:text-dark p-2 px-6 text-lg font-semibold 
                     sm:px-4 sm:text-base
+                    ease-in-out duration-300
+                    dark:hover:bg-primaryDark 
+                    hover:bg-primary
                     '
                     >
                         Visit Project
@@ -96,13 +102,13 @@ const Project = ({ type, title, img, link, github }) => {
 
                 <div className='mt-2 w-full  flex items-center justify-between'>
                     <Link href={link} target='_blank'
-                    className='text-lg font-semibold underline md:text-base'
+                    className='text-lg font-semibold underline md:text-base hover:text-primary dark:hover:text-primaryDark ease-in duration-300'
                     >
                         Visit 
                     </Link>
                     <Link href={github} target='_blank' className='w-8 md:w-6'>
                         {" "}
-                        <GithubIcon />
+                        <GithubIcon className='hover:text-primary dark:hover:text-primaryDark ease-in-out duration-300' />
                         {" "}
                     </Link>
                     
@@ -113,6 +119,10 @@ const Project = ({ type, title, img, link, github }) => {
 };
 
 const projects = () => {
+
+    
+
+    
     return (
         <>
             <Head>
@@ -130,38 +140,28 @@ const projects = () => {
                 <div className='col-span-12 '>
                     <FeaturedProject 
                     type="Featured Project"
-                    title="EntSpot"
+                    title="Pixel Palace"
+                    summary="A passion project virtual arcade with theme selection and a small variety of games built from the bottom up."
+                    link="https://screendb.vercel.app/"
+                    github="https://github.com/JacobHocker/screendb"
+                    img={PixelPalaceThumb}
+                    
+                    
+                    />
+                </div>
+
+                <div className='col-span-12 '>
+                    <FeaturedProject 
+                    type="Featured Project"
+                    title="Screen DB"
                     summary="An IMDB clone site using the TMDB API. Made with NextJS & Tailwind CSS. Find movies, people, and shows in this expansive application for all your entertainment knowledge needs!"
-                    link="https://ent-spot.vercel.app/"
-                    github="https://github.com/JacobHocker/ent-spot"
-                    img={EntSpotThumb}
+                    link="https://screendb.vercel.app/"
+                    github="https://github.com/JacobHocker/screendb"
+                    img={ScreenDbThumb}
                     
                     
                     />
                 </div>
-
-                <div className='col-span-6 sm:col-span-12'>
-                        <Project 
-                        type="Featured Project"
-                        title="Jacob Hocker Portfolio"
-                        link="/"
-                        github="https://github.com/JacobHocker/next-portfolio"
-                        img={PortfolioThumb}
-                        
-                        
-                        />
-                </div>
-
-                <div className='col-span-6 sm:col-span-12'>
-                    <Project 
-                        type="Featured Project"
-                        title="Coming Soon"
-                        link="/"
-                        github="/"
-                        img={ComingSoon}
-                    />
-                </div>
-
                 <div className='col-span-12 '>
                     <FeaturedProject 
                         type="Featured Project"
@@ -176,18 +176,18 @@ const projects = () => {
                 </div>
 
                 <div className='col-span-6 sm:col-span-12'>
-                    <Project 
-                        type="Featured Project"
-                        title="Coming Soon"
+                        <Project 
+                        type="Project"
+                        title="Portfolio"
                         link="/"
-                        github="/"
-                        img={ComingSoon}
-                    />
+                        github="https://github.com/JacobHocker/next-portfolio"
+                        img={PortfolioThumb}
+                        />
                 </div>
 
                 <div className='col-span-6 sm:col-span-12'>
                     <Project 
-                        type="Featured Project"
+                        type="Project"
                         title="Coming Soon"
                         link="/"
                         github="/"
